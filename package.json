@@ -15,7 +15,16 @@
   "bugs": {
     "url": "https://github.com/nodenv/nodenv-nvmrc/issues"
   },
+  "directories": {
+    "bin": "bin",
+    "test": "test"
+  },
+  "files": [
+    "bin",
+    "etc"
+  ],
   "scripts": {
+    "start": "bin/nodenv-nvmrc",
     "test": "bats ${CI:+--tap} test",
     "docker:test": "docker run -it --rm -v $PWD:/nodenv-nvmrc node:16 /bin/sh -c 'cd nodenv-nvmrc; npm it'",
     "postversion": "git push --follow-tags"
