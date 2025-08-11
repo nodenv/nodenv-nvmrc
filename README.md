@@ -17,7 +17,7 @@ When .nvmrc is configured with a range this plugin chooses the greatest installe
 ### Installing with git
 
 ```sh
-$ git clone https://github.com/ouchxp/nodenv-nvmrc.git $(nodenv root)/plugins/nodenv-nvmrc
+$ git clone https://github.com/nodenv/nodenv-nvmrc.git $(nodenv root)/plugins/nodenv-nvmrc
 ```
 
 ### Installing with Homebrew
