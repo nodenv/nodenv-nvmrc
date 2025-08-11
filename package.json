@@ -2,13 +2,13 @@
   "name": "@nodenv/nodenv-nvmrc",
   "version": "1.0.6",
   "description": "Activate a nodenv node version from .nvmrc",
-  "homepage": "https://github.com/ouchxp/nodenv-nvmrc#readme",
+  "homepage": "https://github.com/nodenv/nodenv-nvmrc#readme",
   "license": "MIT",
   "author": "Nan Wu",
   "contibutors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ouchxp/nodenv-nvmrc.git"
+    "url": "https://github.com/nodenv/nodenv-nvmrc.git"
   },
   "bugs": {
     "url": "https://github.com/nodenv/nodenv-nvmrc/issues"
