@@ -1,3 +1,5 @@
-test
-node_modules/
-!node_modules/sh-semver/
+/node_modules
+/package*/
+/tmp
+
+/nodenv-nodenv-nvmrc-*.tgz
