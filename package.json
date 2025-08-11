@@ -21,7 +21,6 @@
   },
   "scripts": {
     "test": "bats ${CI:+--tap} test",
-    "update:deps": "curl 'https://raw.githubusercontent.com/qzb/sh-semver/master/semver.sh' > deps/semver.sh",
     "publish:brew": "brew-publish $npm_package_name v$npm_package_version",
     "postversion": "git push --follow-tags && npm run publish:brew",
     "docker:test": "docker run -it --rm -v $PWD:/nodenv-nvmrc node:16 /bin/sh -c 'cd nodenv-nvmrc; npm install; npm run pretest; npm run test'"
