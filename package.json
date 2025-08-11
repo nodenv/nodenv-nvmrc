@@ -31,6 +31,6 @@
     "brew-publish": "^2.0.0"
   },
   "dependencies": {
-    "sh-semver": "^1.0.0"
+    "sh-semver": "^1.1.0"
   }
 }
