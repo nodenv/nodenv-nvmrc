@@ -15,20 +15,14 @@
   "bugs": {
     "url": "https://github.com/nodenv/nodenv-nvmrc/issues"
   },
-  "config": {
-    "bin": "bin",
-    "test": "test"
-  },
   "scripts": {
     "test": "bats ${CI:+--tap} test",
-    "publish:brew": "brew-publish $npm_package_name v$npm_package_version",
-    "postversion": "git push --follow-tags && npm run publish:brew",
-    "docker:test": "docker run -it --rm -v $PWD:/nodenv-nvmrc node:16 /bin/sh -c 'cd nodenv-nvmrc; npm install; npm run pretest; npm run test'"
+    "docker:test": "docker run -it --rm -v $PWD:/nodenv-nvmrc node:16 /bin/sh -c 'cd nodenv-nvmrc; npm it'",
+    "postversion": "git push --follow-tags"
   },
   "devDependencies": {
     "@nodenv/nodenv": "^1.6.2",
-    "bats": "^1.12.0",
-    "brew-publish": "^2.0.0"
+    "bats": "^1.12.0"
   },
   "dependencies": {
     "sh-semver": "^1.1.0"
