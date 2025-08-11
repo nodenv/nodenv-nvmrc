@@ -5,7 +5,9 @@
   "homepage": "https://github.com/nodenv/nodenv-nvmrc#readme",
   "license": "MIT",
   "author": "Nan Wu",
-  "contibutors": [],
+  "contibutors": [
+    "Jason Karns <jason.karns@gmail.com> (http://jasonkarns.com)"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/nodenv/nodenv-nvmrc.git"
