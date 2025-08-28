@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nodenv/nodenv-nvmrc.git"
+    "url": "git+https://github.com/nodenv/nodenv-nvmrc.git"
   },
   "bugs": {
     "url": "https://github.com/nodenv/nodenv-nvmrc/issues"
