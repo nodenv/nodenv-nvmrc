@@ -1,6 +1,6 @@
 # nodenv-nvmrc
 
-Teach nodenv to use .nvmrc in addition to .node-version.
+A [nodenv][] plugin to activate Node version from `.nvmrc`.
 
 [![Tests](https://img.shields.io/github/actions/workflow/status/nodenv/nodenv-nvmrc/test.yml?label=tests&logo=github)](https://github.com/nodenv/nodenv-nvmrc/actions/workflows/test.yml)
 [![Latest GitHub Release](https://img.shields.io/github/v/release/nodenv/nodenv-nvmrc?label=github&logo=github&sort=semver)](https://github.com/nodenv/nodenv-nvmrc/releases/latest)
@@ -51,3 +51,5 @@ To run tests, install [bats](https://github.com/sstephenson/bats) and [nodenv](h
 This project is heavily inspired by nodenv-package-json-engine[[1]](https://github.com/nodenv/nodenv-package-json-engine).
 
 Shell semver range support provided by [sh-semver](https://github.com/qzb/sh-semver).
+
+[nodenv]: https://github.com/nodenv/nodenv

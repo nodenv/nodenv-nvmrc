@@ -1,7 +1,7 @@
 {
   "name": "@nodenv/nodenv-nvmrc",
   "version": "1.0.6",
-  "description": "Activate a nodenv node version from .nvmrc",
+  "description": "A nodenv plugin to activate Node version from .nvmrc.",
   "homepage": "https://github.com/nodenv/nodenv-nvmrc#readme",
   "license": "MIT",
   "author": "Nan Wu",
