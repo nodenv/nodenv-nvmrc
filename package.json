@@ -29,11 +29,11 @@
     "docker:test": "docker run -it --rm -v $PWD:/nodenv-nvmrc node:16 /bin/sh -c 'cd nodenv-nvmrc; npm it'",
     "postversion": "git push --follow-tags"
   },
-  "devDependencies": {
-    "@nodenv/nodenv": "^1.6.2",
-    "bats": "^1.12.0"
-  },
   "dependencies": {
     "sh-semver": "^1.1.0"
+  },
+  "devDependencies": {
+    "@nodenv/nodenv": "1",
+    "bats": "1"
   }
 }
