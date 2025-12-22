@@ -8,4 +8,3 @@ load test_helper
   run nodenv version-name
   assert_success "4.2.1"
 }
-

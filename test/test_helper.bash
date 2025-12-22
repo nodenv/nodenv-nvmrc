@@ -22,7 +22,8 @@ assert() {
 
 assert_equal() {
   if [ "$1" != "$2" ]; then
-    { echo "expected: $1"
+    {
+      echo "expected: $1"
       echo "actual:   $2"
     } | flunk
   fi
@@ -30,8 +31,10 @@ assert_equal() {
 
 assert_output() {
   local expected
-  if [ $# -eq 0 ]; then expected="$(cat -)"
-  else expected="$1"
+  if [ $# -eq 0 ]; then
+    expected="$(cat -)"
+  else
+    expected="$1"
   fi
   assert_equal "$expected" "$output"
 }
@@ -49,7 +52,7 @@ cd_into_dir() {
   local version="$1"
   mkdir -p "$EXAMPLE_DIR"
   cd "$EXAMPLE_DIR"
-  echo "$version" > "$EXAMPLE_DIR/.nvmrc"
+  echo "$version" >"$EXAMPLE_DIR/.nvmrc"
 }
 
 # Creates fake version directory
@@ -60,8 +63,11 @@ create_version() {
 }
 
 flunk() {
-  { if [ "$#" -eq 0 ]; then cat -
-    else echo "$@"
+  {
+    if [ "$#" -eq 0 ]; then
+      cat -
+    else
+      echo "$@"
     fi
   } >&2
   return 1
