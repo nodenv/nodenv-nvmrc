@@ -10,5 +10,7 @@ indent_style = space
 
 ; vendored libs
 [semver.sh]
+; disables shfmt
+ignore = true
 ; disables editorconfig-checker
 indent_size = unset
