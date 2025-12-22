@@ -1,4 +1,3 @@
-target_dir="$1"
 find_nvmrc_file() {
   local root="$1"
   while ! [[ "$root" =~ ^//[^/]*$ ]]; do
@@ -13,6 +12,7 @@ find_nvmrc_file() {
 }
 
 if [ -n "$NODENV_VERSION" ] && [ "$(nodenv-nvmrc)" != "$NODENV_VERSION" ]; then
+  # shellcheck disable=SC2034
   NODENV_VERSION_ORIGIN="NODENV_VERSION environment variable"
 elif ! NODENV_NVMRC_VERSION=$(nodenv-nvmrc); then
   exit 1

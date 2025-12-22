@@ -1,7 +1,7 @@
 EXAMPLE_DIR="$BATS_TMPDIR/example_dir"
-TEST_BASENAME="$(basename $BATS_TEST_DIRNAME)"
+TEST_BASENAME="$(basename "$BATS_TEST_DIRNAME")"
 # TODO: Should this just be $(dirname ...) ?
-PLUGIN_ROOT="${BATS_TEST_DIRNAME%${TEST_BASENAME}}"
+PLUGIN_ROOT="${BATS_TEST_DIRNAME%"${TEST_BASENAME}"}"
 
 setup() {
   export NODENV_ROOT="$BATS_TMPDIR/nodenv_root"
@@ -16,7 +16,7 @@ teardown() {
 
 assert() {
   if ! "$@"; then
-    flunk "failed: $@"
+    flunk "failed: $*"
   fi
 }
 
@@ -36,10 +36,12 @@ assert_output() {
   else
     expected="$1"
   fi
+  # shellcheck disable=SC2154
   assert_equal "$expected" "$output"
 }
 
 assert_success() {
+  # shellcheck disable=SC2154
   if [ "$status" -ne 0 ]; then
     flunk "command failed with exit status $status"
   elif [ "$#" -gt 0 ]; then
@@ -51,7 +53,7 @@ assert_success() {
 cd_into_dir() {
   local version="$1"
   mkdir -p "$EXAMPLE_DIR"
-  cd "$EXAMPLE_DIR"
+  cd "$EXAMPLE_DIR" || return
   echo "$version" >"$EXAMPLE_DIR/.nvmrc"
 }
 

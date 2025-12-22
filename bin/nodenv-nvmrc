@@ -49,7 +49,8 @@ should_find_in_nvmrc() {
 }
 
 version_from_nvmrc() {
-  local version_expression="$(cat "$NVMRC_PATH")"
+  local version_expression
+  version_expression="$(cat "$NVMRC_PATH")"
 
   local -a installed_versions
   if [[ -n "$version_expression" ]]; then
