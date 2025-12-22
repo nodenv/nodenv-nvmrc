@@ -17,7 +17,7 @@ When .nvmrc is configured with a range this plugin chooses the greatest installe
 ### Installing with Git
 
 ```sh
-$ git clone https://github.com/nodenv/nodenv-nvmrc.git $(nodenv root)/plugins/nodenv-nvmrc
+git clone https://github.com/nodenv/nodenv-nvmrc.git $(nodenv root)/plugins/nodenv-nvmrc
 ```
 
 ### Installing with Homebrew
@@ -27,8 +27,8 @@ MacOS users can install [many nodenv plugins](https://github.com/nodenv/homebrew
 _This is the recommended method of installation if you installed nodenv with Homebrew._
 
 ```sh
-$ brew tap nodenv/nodenv
-$ brew install nodenv-nvmrc
+brew tap nodenv/nodenv
+brew install nodenv-nvmrc
 ```
 
 ## Usage
