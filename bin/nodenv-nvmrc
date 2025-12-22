@@ -6,7 +6,6 @@
 # test the installed versions against that range and print the
 # greatest matching version.
 
-
 # Setup for relative includes. Adapted from:
 # http://www.ostricher.com/2014/10/the-right-way-to-get-the-directory-of-a-bash-script/
 # http://stackoverflow.com/a/12694189/407845
@@ -17,7 +16,7 @@ get_script_dir() {
   # while $src is a symlink, resolve it
   while [ -h "$src" ]; do
     dir="${src%/*}"
-    src="$( readlink "$src" )"
+    src="$(readlink "$src")"
 
     # If $src was a relative symlink (so no "/" as prefix),
     # need to resolve it relative to the symlink base directory
@@ -50,19 +49,20 @@ should_find_in_nvmrc() {
 }
 
 version_from_nvmrc() {
-  local version_expression="$(cat "$NVMRC_PATH")"
+  local version_expression
+  version_expression="$(cat "$NVMRC_PATH")"
 
   local -a installed_versions
-  if [[ -n "$version_expression" ]] ; then
+  if [[ -n "$version_expression" ]]; then
     while IFS= read -r v; do
-      if [[ $v =~ ^[0-9.]+$ ]] ; then
-        installed_versions+=( "$v" )
+      if [[ $v =~ ^[0-9.]+$ ]]; then
+        installed_versions+=("$v")
       fi
     done < <(nodenv versions --bare --skip-aliases)
 
-    version=$("$SEMVER" -r "$version_expression" "${installed_versions[@]}" \
-      | tail -n 1)
-    if [[ -n "$version" ]] ; then
+    version=$("$SEMVER" -r "$version_expression" "${installed_versions[@]}" |
+      tail -n 1)
+    if [[ -n "$version" ]]; then
       echo "$version"
     else
       echo "$version_expression"
