@@ -14,7 +14,7 @@ When .nvmrc is configured with a range this plugin chooses the greatest installe
 
 ## Installation
 
-### Installing with git
+### Installing with Git
 
 ```sh
 $ git clone https://github.com/nodenv/nodenv-nvmrc.git $(nodenv root)/plugins/nodenv-nvmrc
@@ -22,7 +22,7 @@ $ git clone https://github.com/nodenv/nodenv-nvmrc.git $(nodenv root)/plugins/no
 
 ### Installing with Homebrew
 
-Mac OS X users can install [many nodenv plugins](https://github.com/nodenv/homebrew-nodenv) with [Homebrew](http://brew.sh).
+MacOS users can install [many nodenv plugins](https://github.com/nodenv/homebrew-nodenv) with [Homebrew](http://brew.sh).
 
 *This is the recommended method of installation if you installed nodenv with
 Homebrew.*
@@ -50,6 +50,6 @@ To run tests, install [bats](https://github.com/sstephenson/bats) and [nodenv](h
 
 This project is heavily inspired by nodenv-package-json-engine[[1]](https://github.com/nodenv/nodenv-package-json-engine).
 
-Shell semver range support provided by [sh-semver](https://github.com/qzb/sh-semver).
+Shell SemVer range support provided by [sh-semver](https://github.com/qzb/sh-semver).
 
 [nodenv]: https://github.com/nodenv/nodenv
