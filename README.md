@@ -24,8 +24,7 @@ $ git clone https://github.com/nodenv/nodenv-nvmrc.git $(nodenv root)/plugins/no
 
 MacOS users can install [many nodenv plugins](https://github.com/nodenv/homebrew-nodenv) with [Homebrew](http://brew.sh).
 
-*This is the recommended method of installation if you installed nodenv with
-Homebrew.*
+_This is the recommended method of installation if you installed nodenv with Homebrew._
 
 ```sh
 $ brew tap nodenv/nodenv
@@ -34,17 +33,21 @@ $ brew install nodenv-nvmrc
 
 ## Usage
 
-Once you've installed the plugin you can verify that it's working by `cd`ing into a project that has a `.nvmrc` file and does not have a `.node-version` file.  From anywhere in the project's tree, run `nodenv which node`.
+Once you've installed the plugin,
+you can verify that it's working by `cd`ing into a project that has a `.nvmrc` file and does not have a `.node-version` file.
+From anywhere in the project's tree, run `nodenv which node`.
 
 ## Gotcha
 
 Due to the limitaion of nodenv's plugin system, some commands were not reading the version from `.nvmrc`.
+
 - `nodenv install` without version is not able to install new Node version specified in `.nvmrc`.
 - `nodenv local` without version is not able to retrieve the version specified in `.nvmrc`
 
 ## Contributing
 
-To run tests, install [bats](https://github.com/sstephenson/bats) and [nodenv](https://github.com/nodenv/nodenv), then run `bats test`  in the base directory of this plugin
+To run tests, install [bats](https://github.com/sstephenson/bats) and [nodenv](https://github.com/nodenv/nodenv),
+then run `bats test` in the base directory of this plugin
 
 ## Credits
 
